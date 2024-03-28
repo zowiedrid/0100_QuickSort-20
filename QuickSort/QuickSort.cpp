@@ -68,3 +68,9 @@ void display() {
 	cout << "=============================" << endl; //output ke layar
 	cout << "Jumlah pass: " << n - 1 << endl; //output ke layar
 }
+
+int main() {
+	input(); //memanggil fungsi input
+	quickSortArray(); //memanggil fungsi bubbleSortArray
+	display(); //memanggil fungsi display
+}
