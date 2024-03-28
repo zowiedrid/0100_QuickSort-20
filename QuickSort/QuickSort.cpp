@@ -28,7 +28,8 @@ void input() {
 }
 
 void quickSortArray(int high, int low) {
-    // Step 1: If low is not less than high, return
+    
+// Step 1: If low is not less than high, return
     if (high < low) {
         // Step 2: Set pivot as the last element in the array
         int pivot = a[low];
