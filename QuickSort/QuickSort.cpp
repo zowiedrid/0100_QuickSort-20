@@ -70,7 +70,7 @@ void display() {
 }
 
 int main() {
-	input(); //memanggil fungsi input
-	quickSortArray(); //memanggil fungsi bubbleSortArray
-	display(); //memanggil fungsi display
+    input(); //memanggil fungsi input
+    quickSortArray(0, n - 1); //memanggil fungsi quicksort dengan parameter high dan low
+    display(); //memanggil fungsi display
 }
