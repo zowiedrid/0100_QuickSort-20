@@ -26,3 +26,30 @@ void input() {
 		cin >> a[i]; //input dari user
 	}
 }
+
+void quickSortArray(int high, int low) {
+    // Step 1: If low is not less than high, return
+    if (high < low) {
+        // Step 2: Set pivot as the last element in the array
+        int pivot = a[low];
+        // Step 3: Set i as the index before the first element
+        int i = (high - 1);
+
+        // Step 4: Iterate over the array from the first element to the one before the pivot
+        for (int j = high; j <= low - 1; j++) {
+            // Step 5 and 6: If the current element is less than the pivot, increment i and swap the current element with the element at index i
+            if (a[j] < pivot) {
+                i++;
+                swap(a[i], a[j]);
+            }
+        }
+        // Step 7: Swap the pivot with the element at the next index after i
+        swap(a[i + 1], a[low]);
+        // Step 8: Set the partition index as the next index after i
+        int partitionIndex = i + 1;
+
+        // Step 9: Recursively apply the QuickSort algorithm to the two sub-arrays divided by the partition index
+        quickSortArray(high, partitionIndex - 1);
+        quickSortArray(partitionIndex + 1, low);
+    }
+}
